@@ -1,0 +1,54 @@
+{
+    "count": 82,
+    "next": "https://swapi.dev/api/people/?page=2",
+    "results": [
+      {
+        "name": "Luke Skywalker",
+        "height": "172",
+        "starships": ["X-wing", "Imperial shuttle"],
+        "films": ["https://swapi.dev/api/films/1/"]
+      },
+      {
+        "name": "Darth Vader",
+        "height": "202",
+        "starships": ["TIE Advanced x1"],
+        "films": ["https://swapi.dev/api/films/1/"]
+      },
+      {
+        "name": "Darth Vader",
+        "height": "202",
+        "starships": ["TIE Advanced x1"],
+        "films": ["https://swapi.dev/api/films/1/"]
+      },
+      {
+        "name": "Darth Vader",
+        "height": "202",
+        "starships": ["TIE Advanced x1"],
+        "films": ["https://swapi.dev/api/films/1/"]
+      },
+      {
+        "name": "Darth Vader",
+        "height": "202",
+        "starships": ["TIE Advanced x1"],
+        "films": ["https://swapi.dev/api/films/1/"]
+      },
+      {
+        "name": "Darth Vader",
+        "height": "202",
+        "starships": ["TIE Advanced x1"],
+        "films": ["https://swapi.dev/api/films/1/"]
+      },
+      {
+        "name": "Darth Vader",
+        "height": "202",
+        "starships": ["TIE Advanced x1"],
+        "films": ["https://swapi.dev/api/films/1/"]
+      },
+      {
+        "name": "Darth Vader",
+        "height": "202",
+        "starships": ["TIE Advanced x1"],
+        "films": ["https://swapi.dev/api/films/1/"]
+      }
+    ]
+  }
