@@ -78,6 +78,8 @@ As tecnologias envolvidas entre os três serviços serão basicamente as seguint
 * Prometheus
 * Loki
 * Cloud Monitoring (GCP) / CloudWatch (AWS)
+* Grafana
+* Kibana
 
 ##### Serviço de Autenticação:
 * Keycloak (Identity Platform GCP / Cognito AWS)
