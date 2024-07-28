@@ -1,7 +1,7 @@
 # Proposta de System Design para uma aplicação parecida com o Pinterest.
 
 Desenvolver uma plataforma semelhante ao Pinterest é uma tarefa complexa, dada a diversidade e a sofisticação dos serviços envolvidos.
-Após a leitura de alguns papers e principalmente, do blog de engenharia do próprio Pinterest, compilei alguns números e soluções para os principais casos de uso propostos:
+Após a leitura de alguns [papers](https://read.engineerscodex.com/p/how-pinterest-scaled-to-11-million) e principalmente, do [blog de engenharia do Pinterest](https://medium.com/pinterest-engineering), compilei alguns números e soluções para os principais casos de uso propostos:
 * Como lidar com formatos de mídia diferentes (imagens, vídeos, links) e de origem diferente (criado por usuário, gerado pela plataforma, ADs, conteúdo externo - que redireciona para um site);
 * Recomendação de conteúdos relevantes para o usuário;
 * Possibilidade ao usuário salvar o conteúdo em pastas, curtir e comentar um conteúdo;
@@ -28,6 +28,7 @@ Responsável por uploads de fotos, vídeos e links.
 * Fotos: ~3.45 QPS
 * Vídeos: ~1.15 QPS
 * Links: ~2.30 QPS
+
 Total: ~6.90 QPS
 
 ##### Interação Social
@@ -36,13 +37,14 @@ Responsável por curtidas, comentários, criação de pastas e movimentação de
 * comentários: ~2.30 QPS
 * 1 pasta/semana: ~0.16 QPS
 * 2 conteúdos movidos para pasta: ~2.30 QPS
+
 Total: ~14 QPS
 
 ##### Engine de recomendação
 * total de ações / 24h = ~21 QPS
 
 Com base nisso, podemos montar um arquitetura da seguinte forma:
-[![dItrBse.md.png](https://iili.io/dItrBse.md.png)](https://freeimage.host/i/dItrBse)
+[![dItLUpj.md.png](https://iili.io/dItLUpj.md.png)]
 
 Trata-se de uma arquitetura amplamente utilizada no mercado, que já se provou funcional e com a qual a maioria dos desenvolvedores e DevOps já estão familiarizados.
 
@@ -96,3 +98,10 @@ As tecnologias envolvidas entre os três serviços serão basicamente as seguint
 * CodeBuild (AWS)
 
 O mais importante para escolher as tecnologias é considerar o lock-in com um provedor de nuvem ou o uso de ferramentas open source self-hosted. Além disso, a região geográfica escolhida também terá impacto direto nos custos. Alguns serviços podem ser até 20% mais caros se forem hospedados em São Paulo nos provedores de nuvem. No entanto, o tempo de resposta será menor para os usuários, considerando que a plataforma será utilizada por brasileiros ou falantes da língua portuguesa.
+
+#### Créditos: 
+* https://highscalability.com/scaling-pinterest-from-0-to-10s-of-billions-of-page-views-a/
+* https://medium.com/pinterest-engineering/pacer-pinterests-new-generation-of-asynchronous-computing-platform-5c338a15d2a0
+* https://medium.com/pinterest-engineering/large-scale-user-sequences-at-pinterest-78a5075a3fe9
+* https://datareportal.com/essential-pinterest-stats
+* ChatGPT pela resumo de artigos e correção de texto.
